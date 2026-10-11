@@ -1,6 +1,6 @@
 # Mailspring Sort Inbox
 
-An Airmail-style **Sort & Filter** menu in the thread list toolbar, next to the search bar. Sort the list by date or sender, show only unread, read, or starred threads, and switch between oldest and newest first.
+A Mailspring plugin that adds an Airmail-style **Sort & Filter** menu to the thread list toolbar, next to the search bar. Sort the inbox by date or sender, show only unread, read, or starred threads, and switch between oldest and newest first.
 
 ## Features
 
@@ -93,6 +93,8 @@ Started from [Foundry376/Mailspring-Plugin-Starter](https://github.com/Foundry37
 ## Related projects
 
 - [Foundry376/Mailspring](https://github.com/Foundry376/Mailspring): the Mailspring app itself
+- [jvsteiner/jev-mailspring](https://github.com/jvsteiner/jev-mailspring): AI-assisted inbox sorting for Mailspring
+- [Wa-dot/mailspring-sort](https://github.com/Wa-dot/mailspring-sort): another Mailspring sort plugin
 - [rocket6317/mailspring-customizations](https://github.com/rocket6317/mailspring-customizations): macOS-focused theme and plugins
 - [Striffly/mailspring-avatars](https://github.com/Striffly/mailspring-avatars): avatars in the message list
 - [tennox/mailspring-categories](https://github.com/tennox/mailspring-categories): category tabs
