@@ -2,6 +2,8 @@
 
 A Mailspring plugin that adds an Airmail-style **Sort & Filter** menu to the thread list toolbar, next to the search bar. Sort the inbox by date or sender, show only unread, read, or starred threads, and switch between oldest and newest first.
 
+![Sort & Filter menu open in Mailspring, with Sender and Oldest first selected](preview.png)
+
 ## Features
 
 - **Sort by** Date (default) or Sender. Sender sorting matches the From column.
