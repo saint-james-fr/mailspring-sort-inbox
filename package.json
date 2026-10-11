@@ -1,0 +1,36 @@
+{
+  "name": "mailspring-sort-inbox",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "title": "Airmail Sort & Filter",
+  "description": "Airmail-style sort and filter menu near the search bar in Mailspring",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saint-james-fr/mailspring-sort-inbox"
+  },
+  "keywords": [
+    "mailspring",
+    "mailspring-plugin",
+    "email",
+    "inbox",
+    "sort",
+    "filter"
+  ],
+  "engines": {
+    "mailspring": ">=1.6.3"
+  },
+  "windowTypes": {
+    "default": true
+  },
+  "syncInit": true,
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "watch": "tsc --watch",
+    "test": "node --test test/*.test.js",
+    "package-release": "bash scripts/package-release.sh"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  },
+  "license": "MIT"
+}

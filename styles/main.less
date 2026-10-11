@@ -1,0 +1,103 @@
+@import 'ui-variables';
+@import 'ui-mixins';
+
+// Sit in the thread-list toolbar like any other .btn-toolbar (darwin capsule styles
+// come from static/style/workspace.less). Avoid mimicking the search field chrome.
+.airmail-sort-container {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  overflow: visible;
+  z-index: 100;
+
+  .btn.btn-toolbar.airmail-sort-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-width: 0;
+
+    svg {
+      display: block;
+      width: 15px;
+      height: 15px;
+      color: fade(@text-color-heading, 80%);
+    }
+
+    &:hover svg {
+      color: fade(@text-color-heading, 92%);
+    }
+
+    &:active svg {
+      color: fade(@text-color-heading, 95%);
+    }
+
+    &.active svg {
+      color: @accent-primary;
+    }
+  }
+}
+
+:where(body.platform-darwin) .airmail-sort-container .btn.btn-toolbar.airmail-sort-btn {
+  width: @toolbar-btn-height-darwin;
+  min-width: @toolbar-btn-height-darwin;
+}
+
+.airmail-sort-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 1000;
+  min-width: 200px;
+  padding: 6px 0;
+  background: @background-primary;
+  border: 1px solid fade(@text-color, 12%);
+  border-radius: @border-radius-base;
+  box-shadow: 0 8px 24px fade(@black, 20%);
+}
+
+:where(body.platform-darwin) .airmail-sort-dropdown {
+  top: calc(100% + 6px);
+  border-radius: @border-radius-large;
+}
+
+.airmail-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: @text-color;
+
+  &:hover {
+    background: fade(@text-color, 6%);
+  }
+}
+
+.airmail-menu-check {
+  width: 14px;
+  flex-shrink: 0;
+  text-align: center;
+  color: @accent-primary;
+}
+
+.airmail-menu-label {
+  flex: 1;
+}
+
+.airmail-menu-divider {
+  height: 1px;
+  margin: 4px 0;
+  background: fade(@text-color, 10%);
+}
+
+.airmail-menu-section {
+  padding: 4px 12px 2px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: fade(@text-color, 45%);
+  user-select: none;
+}
