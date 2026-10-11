@@ -1,5 +1,6 @@
 import { React } from 'mailspring-exports';
 import SortStore from './sort-store';
+import { t } from './i18n';
 
 export default class AirmailSortButton extends React.Component {
   static displayName = 'AirmailSortButton';
@@ -92,7 +93,7 @@ export default class AirmailSortButton extends React.Component {
           type="button"
           className={`btn btn-toolbar narrow airmail-sort-btn${isCustomActive ? ' active' : ''}`}
           onClick={this._toggleOpen}
-          title="Sort & Filter"
+          title={t('Sort & Filter')}
           aria-expanded={isOpen}
         >
           <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -103,39 +104,39 @@ export default class AirmailSortButton extends React.Component {
         </button>
         {isOpen && (
           <div className="airmail-sort-dropdown">
-            {this.renderSectionTitle('Sort by')}
-            {this.renderMenuItem('date', 'Date', listSortKey === 'date', () =>
+            {this.renderSectionTitle(t('Sort by'))}
+            {this.renderMenuItem('date', t('Date'), listSortKey === 'date', () =>
               SortStore.setListSortKey('date')
             )}
-            {this.renderMenuItem('sender', 'Sender', listSortKey === 'sender', () =>
+            {this.renderMenuItem('sender', t('Sender'), listSortKey === 'sender', () =>
               SortStore.setListSortKey('sender')
             )}
             <div className="airmail-menu-divider" />
-            {this.renderSectionTitle('Show')}
-            {this.renderMenuItem('unread', 'Unread only', readFilter === 'unread', () =>
+            {this.renderSectionTitle(t('Show'))}
+            {this.renderMenuItem('unread', t('Unread only'), readFilter === 'unread', () =>
               SortStore.toggleUnreadOnly()
             )}
-            {this.renderMenuItem('read', 'Read only', readFilter === 'read', () =>
+            {this.renderMenuItem('read', t('Read only'), readFilter === 'read', () =>
               SortStore.toggleReadOnly()
             )}
-            {this.renderMenuItem('starred', 'Starred', starredOnly, () =>
+            {this.renderMenuItem('starred', t('Starred'), starredOnly, () =>
               SortStore.toggleStarredOnly()
             )}
             {hasSearchFilters &&
-              this.renderMenuItem('clear-filters', 'Clear filters', false, () =>
+              this.renderMenuItem('clear-filters', t('Clear filters'), false, () =>
                 SortStore.clearSearchFilters()
               )}
             <div className="airmail-menu-divider" />
-            {this.renderSectionTitle('Search')}
-            {this.renderMenuItem('subject', 'By subject…', subjectSearch, () =>
+            {this.renderSectionTitle(t('Search'))}
+            {this.renderMenuItem('subject', t('By subject…'), subjectSearch, () =>
               SortStore.focusSubjectSearch()
             )}
             <div className="airmail-menu-divider" />
-            {this.renderSectionTitle('Order')}
-            {this.renderMenuItem('asc', 'Oldest first', sortDirection === 'asc', () =>
+            {this.renderSectionTitle(t('Order'))}
+            {this.renderMenuItem('asc', t('Oldest first'), sortDirection === 'asc', () =>
               SortStore.setSortDirection('asc')
             )}
-            {this.renderMenuItem('desc', 'Newest first', sortDirection === 'desc', () =>
+            {this.renderMenuItem('desc', t('Newest first'), sortDirection === 'desc', () =>
               SortStore.setSortDirection('desc')
             )}
           </div>

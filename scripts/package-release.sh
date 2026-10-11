@@ -14,7 +14,7 @@ stage=$(mktemp -d)
 trap 'rm -rf "$stage"' EXIT
 
 mkdir "$stage/$name"
-cp -R package.json lib styles README.md LICENSE "$stage/$name/"
+cp -R package.json lib lang styles README.md LICENSE "$stage/$name/"
 
 rm -f "$zip_path"
 (cd "$stage" && zip -qr "$zip_path" "$name")

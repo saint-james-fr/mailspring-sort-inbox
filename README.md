@@ -12,6 +12,18 @@ An Airmail-style **Sort & Filter** menu in the thread list toolbar, next to the 
 
 The button shows a dot when a non-default sort or filter is active.
 
+## Languages
+
+The menu follows Mailspring's language setting. It ships translations for French, Spanish, German, Italian, and Brazilian Portuguese (`lang/*.json`). Labels that Mailspring already translates, such as Date, Show, Unread, and Starred, use Mailspring's own translations. Everything else falls back to English.
+
+To test a language without changing your settings, start Mailspring with `--lang`:
+
+```bash
+/Applications/Mailspring.app/Contents/MacOS/Mailspring --lang=de
+```
+
+To add a language, copy `lang/fr.json` to `lang/<code>.json` (for example `lang/nl.json`) and translate the values. Keep the English keys as they are. `npm test` fails if a file is missing a key.
+
 ## Requirements
 
 - Mailspring 1.6.3 or newer (from `engines` in `package.json`). Tested on Mailspring 1.26.0.
