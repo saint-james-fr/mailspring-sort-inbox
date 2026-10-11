@@ -1,7 +1,7 @@
 {
   "name": "mailspring-sort-inbox",
   "main": "./lib/main",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "Airmail Sort & Filter",
   "description": "Airmail-style sort and filter menu near the search bar in Mailspring",
   "repository": {
